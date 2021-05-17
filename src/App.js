@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+// This file is just the general layout of the app
+import "./App.css";
+import "@ionic/react/css/core.css";
+import {
+  IonApp,
+  IonContent,
+  IonHeader,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/react";
+import { Form } from "./form/form";
+
+import "./theme/variables.css";
+
+import "./grid.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <IonApp>
+      <IonHeader>
+        <IonToolbar>
+          <ion-grid>
+            <ion-row>
+              <ion-col></ion-col>
+              <ion-col size="7">
+                <div>
+                  <IonTitle>Verishare</IonTitle>
+                </div>
+              </ion-col>
+              <ion-col></ion-col>
+            </ion-row>
+          </ion-grid>
+        </IonToolbar>
+      </IonHeader>
+
+      <IonContent className="ion-padding">
+        <ion-grid>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col size="7">
+              <div>
+                <Form></Form>
+                {/* <Dummy></Dummy> */}
+              </div>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+        </ion-grid>
+      </IonContent>
+    </IonApp>
   );
 }
 

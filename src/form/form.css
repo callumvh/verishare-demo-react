@@ -1,0 +1,8 @@
+.my-custom-interface .select-interface-option {
+  /* color: red; */
+  --width: 32px;
+}
+
+ion-popover {
+  --width: 400px;
+}
